@@ -1,26 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styles from './style.css'
-import { AboutHeader } from './components/AboutHeader';
-import {AboutMain} from './components/AboutMain'
-import { AboutRowButtons } from './components/AboutRowButtons';
-import {AboutFooter} from './components/AboutFooter';
+
+import { HomePage } from './pages/HomePage';
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import ContactPage from "./pages/ContactPage";
 
 
-function App(){
-    return(
-        <div>
-            <AboutHeader />
-            <AboutMain />
-            <div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-            </div>
-            <AboutRowButtons />
-            <AboutFooter />
-        </div>
-    );
-}
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+<BrowserRouter>
+<Routes>
+    <Route path="/" element={<HomePage/>}/>
+    <Route path="/about" element={<AboutPage/>}/>
+    <Route path="/projects" element={<ProjectsPage/>}/>
+    <Route path="/contact" element={<ContactPage/>}/>
+</Routes>
+</BrowserRouter>
+, document.getElementById("root"));
