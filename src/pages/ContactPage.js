@@ -1,8 +1,11 @@
 import React from 'react'
 
-export function ContactPage(){
+import { AboutHeader } from '../components/AboutHeader'
+
+export default function ContactPage(){
     return (
         <div>
+            <AboutHeader/>
             <h1>Contact</h1>
         </div>
     )
