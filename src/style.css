@@ -107,3 +107,20 @@ body{
     margin: 0;
     margin-bottom: -50;
 }
+.business-page-body{
+    padding-left: 40%;
+    padding-right: 40%;
+    border-radius: 10px;
+}
+.business-card-container{
+    border-radius: 10px;
+    display: table;
+    background-color: #1A1B21;
+    color: white;
+}
+.business-card-content{
+    padding: 10px;
+}
+.business-intro{
+    text-align: center;
+}
